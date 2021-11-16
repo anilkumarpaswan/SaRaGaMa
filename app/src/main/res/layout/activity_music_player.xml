@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8"
+    android:background="@drawable/nature"
+    tools:context=".MusicPlayer">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtSg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="18dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="Song Name Coming........"
+            android:textAlignment="center"
+            android:textColor="#9A1006"
+            android:textSize="21sp"
+            android:textStyle="italic" >
+
+        </TextView>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/Sound_Image"
+            android:src="@drawable/cdanil"
+            android:padding="22dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center">
+
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+
+            <SeekBar
+                android:id="@+id/SeekBar"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="20dp"
+
+                android:background="#F0FF5E"
+                android:layout_marginBottom="40dp">
+
+            </SeekBar>
+
+            <TextView
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toLeftOf="@+id/SeekBar"
+                android:text="0:10"
+                android:textColor="#FFEB3B"
+                android:textSize="16dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="false"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/SeekBar"
+                android:text="4:10"
+                android:textColor="#F0FF5E"
+                android:textSize="16dp">
+
+            </TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Plat_btn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_anilpause">
+
+            </Button>
+
+            <Button
+                android:id="@+id/Next_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/Plat_btn"
+                android:background="@drawable/ic_anilnext">
+
+            </Button>
+
+
+            <Button
+                android:id="@+id/PrevBack_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_toLeftOf="@id/PreviousBackAll"
+                android:background="@drawable/ic_anilfast">
+
+            </Button>
+
+            <Button
+                android:id="@+id/Forward"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/Next_btn"
+                android:background="@drawable/ic_anilforward">
+
+            </Button>
+
+
+            <Button
+                android:id="@+id/PreviousBackAll"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_toLeftOf="@id/Plat_btn"
+                android:background="@drawable/ic_anilprevious">
+
+            </Button>
+            <com.gauravk.audiovisualizer.visualizer.BarVisualizer
+                android:id="@+id/barAnil"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                app:avColor="#7EE10B"
+                app:avDensity="0.3"
+                app:avSpeed="normal"
+                android:layout_alignParentBottom="true"
+                app:avType="outline"
+                app:avWidth="2dp" />
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

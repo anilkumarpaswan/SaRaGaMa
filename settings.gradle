@@ -1,0 +1,2 @@
+rootProject.name = "SaReGaMa"
+include ':app'
